@@ -1,0 +1,21 @@
+##Execute tests################################################################################################################################################
+Acción------------------------------------ Comando
+Ejecutar todos los tests------------------ pytest
+Ejecutar un archivo específico------------ pytest tests/test_login.py
+Ejecutar un test específico--------------- pytest tests/test_login.py::test_locked_user_login
+Ejecutar solo tests con marcado----------- pytest -m smoke
+Ejectuar test de varias suites------------ pytest -m "smoke or regression"
+Ejecutar test que tenga ambos marcadores-- pytest -m "smoke and regression"
+Generar HTML report----------------------- pytest --html=report.html --self-contained-html
+Generar HTML report para un test---------- pytest tests/test_login.py::test_unknown_user_login --html=report.html --self-contained-html
+Generar HTML report usando tags----------- pytest -m smoke --html=smoke_report.html --self-contained-html
+Generar HTML reports para que se vallan da la carpeta repors los resultados:
+    pytest --html=reports/report_general.html --self-contained-html
+    pytest -m smoke --html=reports/report_smoke.html --self-contained-html
+    pytest tests/test_inventory.py::test_add_multiple_products_to_cart --html=reports/report_add_multiple_products_to_cart.html --self-contained-html
+    pytest --html=reports/report_%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%_%TIME:~0,2%%TIME:~3,2%%TIME:~6,2%.html --self-contained-html
+    pytest tests/test_cart.py::test_verify_cart_content --html=reports/report_test_verify_cart_content.html --self-contained-html
+    pytest tests/test_checkout_step_one.py::test_complete_checkout_step_one --html=reports/report_test_verify_checkout_one_content.html --self-contained-html
+    pytest tests/test_checkout_step_two.py::test_checkout_step_two_and_finish --html=reports/report_test_verify_checkout_two_.html --self-contained-html
+    pytest tests/test_checkout_complete.py::test_checkout_complete --html=reports/report_test_checkout_complete_.html --self-contained-html
+    pytest -m e2e --html=reports/e2e_report.html --self-contained-html

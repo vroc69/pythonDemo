@@ -1,0 +1,11 @@
+# You can install these dependencies using pip:
+# pip install -r requirements.txt
+# This file lists the dependencies required for the Selenium testing framework.
+
+selenium
+pytest
+pytest-html
+
+# To generate a report, you can run:
+# pytest --html=report.html --self-contained-html
+

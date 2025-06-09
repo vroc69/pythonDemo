@@ -2,15 +2,15 @@
   "users": {
     "locked": {
       "username": "locked_out_user",
-      "password": "secret_sauce"
+      "password": ""
     },
     "unknown": {
       "username": "fake_user",
-      "password": "fake_pass"
+      "password": ""
     },
     "successful": {
       "username": "standard_user",
-      "password": "secret_sauce"
+      "password": ""
     }
   },
   "userInfo": {
